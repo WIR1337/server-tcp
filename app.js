@@ -8,13 +8,7 @@ const server = net.createServer( socket => {
     socket.on('connection', () => {
         console.log('New user join server')
     })
-    socket.on('data', data => {
-        // for (i = 0; i < socketsArr.length; ++i){
-        //     // if (socketsArr[i] == socket)
-        //     //     continue;
-
-        //     socketsArr[i].write(data)
-        // }
+    socket.on('data', (data, info) => {
         socketsArr.forEach((user, i) => {
             user.write(`User: ${data}`)
         })
