@@ -15,7 +15,7 @@ readline.on('line', (input) => {
 
 socket.connect({
   port: 6000,
-  host: '127.0.0.1',
+  host: '135.181.94.174',
 }, () => {
   socket.write('💋');
 });
